@@ -12,7 +12,10 @@
         android:layout_height="match_parent"
         android:layout_above="@id/idTILQuery"
         android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:padding="5dp">
 
         <LinearLayout
@@ -20,18 +23,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <!-- text view for displaying question-->
             <TextView
                 android:id="@+id/idTVQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="30dp"
                 android:padding="4dp"
-                android:text="Question"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
-            <!-- text view for displaying response-->
             <TextView
                 android:id="@+id/idTVResponse"
                 android:layout_width="match_parent"
@@ -44,7 +44,7 @@
         </LinearLayout>
 
     </ScrollView>
-    <!-- text field for asking question-->
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/idTILQuery"
         android:layout_width="match_parent"
@@ -71,4 +71,5 @@
             android:textColorHint="@color/white"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
 </RelativeLayout>

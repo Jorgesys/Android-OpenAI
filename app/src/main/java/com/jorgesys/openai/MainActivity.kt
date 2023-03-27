@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var responseTxV: TextView
     lateinit var questionTxV: TextView
     lateinit var queryEdt: TextInputEditText
-
     //Get Open AI API Key from: https://platform.openai.com/account/api-keys
     var urlOpenAI = "https://api.openai.com/v1/completions"
 
@@ -81,11 +80,11 @@ class MainActivity : AppCompatActivity() {
 
         postRequest.setRetryPolicy(object : RetryPolicy {
             override fun getCurrentTimeout(): Int {
-                return 25000
+                return 100000
             }
 
             override fun getCurrentRetryCount(): Int {
-                return 25000
+                return 100000
             }
 
             @Throws(VolleyError::class)
@@ -93,6 +92,7 @@ class MainActivity : AppCompatActivity() {
                 Log.e("OPENAIJorgesys", "Request error: ${error.message}")
             }
         })
+
         queue.add(postRequest)
     }
 }
